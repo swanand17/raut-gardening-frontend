@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { InfoDetailsComponent } from '../info-details/info-details.component';
 import { ServicesEnum } from './services-enum';
 import { ServicesData } from './servicesData';
@@ -15,6 +15,7 @@ export class ServicesComponent implements OnInit {
   selectedService:any  = null;
 
   servicesData = ServicesData;
+  @Input() loadedInHome = false;
 
   constructor() { }
 
