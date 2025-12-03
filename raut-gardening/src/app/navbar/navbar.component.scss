@@ -1,20 +1,22 @@
 .navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
-    padding: 1rem 4rem;
-    color: white;
-    max-width: 1420px;
-    margin: auto;
-    box-shadow: 0px 19px 21px 8px rgba(0,0,0,0.1);
-    // background-color: rgb(17, 179, 17);
+  box-shadow: 0px 19px 21px 8px rgba(0,0,0,0.1);
 
-    &-logo{
+    &-inner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4rem;
+      padding: 1rem 4rem;
+      color: white;
+      margin: auto;
+      // background-color: rgb(17, 179, 17);
+      
+      &-logo{
         width: 20rem;
         height: 10rem;
+      }
     }
-}
+  }
 
 .nav-link{
   font-size: 3rem;
