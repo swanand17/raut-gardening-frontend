@@ -1,0 +1,64 @@
+.hero{
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blur-bg {
+  position: absolute;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+
+.blur-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../../assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.hero-h1{
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.short-intro{
+    font-size: 2rem;
+    max-width: 800px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.down-arrow {
+  width: 25px;
+  height: 25px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(45deg);
+  margin: 20px auto;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px) rotate(45deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+}

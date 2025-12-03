@@ -1,0 +1,45 @@
+<div class="services container-max-width ">
+    <img src="assets/leaf-1.jpeg" alt="Leaf Icon" class="leaf-icon" />
+    <h1>Services</h1>
+    <!-- <div class="services-grid full-width">
+        <div class="row-1">
+             <div class="row-segment pointer">
+                <p>
+                    Landscape Designing
+                </p>
+            </div>
+            <div class="row-segment pointer">
+                <p>
+                    Bungalow Development
+                </p>
+            </div>
+        </div>
+        <div class="row-2">
+            <div class="row-segment pointer">
+                <p>
+                    Swimming Pool Installation
+                </p>
+            </div>
+            <div class="row-segment pointer">
+                <p>
+                    Garden Designing
+                </p>
+            </div>
+        </div>
+    </div> -->
+    <div class="full-width services-cards container-max-width">
+    
+        <ng-container *ngFor="let service of servicesData">
+            <div class="card pointer" [ngStyle]="{ 'background-image': 'url(' + service.image + ')' }" (click)="selectedService = service">
+                 <div class="card-content">
+                    <h3>{{ service.title }}</h3>
+                </div>
+                <!-- <img [src]="service.image" [alt]="service.title || ''" /> -->
+            </div>
+        </ng-container>
+    
+    </div>
+    <div *ngIf="selectedService">
+        <app-info-details [title]="selectedService?.title" [infoData]="selectedService"></app-info-details>
+    </div>
+</div>

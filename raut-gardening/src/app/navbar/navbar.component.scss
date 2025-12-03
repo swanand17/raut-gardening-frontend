@@ -1,0 +1,34 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 1rem 4rem;
+    color: white;
+    max-width: 1420px;
+    margin: auto;
+    box-shadow: 0px 19px 21px 8px rgba(0,0,0,0.1);
+    // background-color: rgb(17, 179, 17);
+
+    &-logo{
+        width: 20rem;
+        height: 10rem;
+    }
+}
+
+.nav-link{
+  font-size: 3rem;
+  padding: 2.5rem;
+  border-radius: 0.8rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover{
+    background-color: #783f00;
+    color: white;
+  }
+
+  &-container{
+    display: flex;
+    gap: 2rem;
+  }
+}

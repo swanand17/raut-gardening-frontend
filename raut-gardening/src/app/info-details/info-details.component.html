@@ -1,0 +1,23 @@
+<section class="feature-section">
+
+  <!-- Title -->
+  <h2 class="section-title">{{ title }}</h2>
+
+  <!-- Rows -->
+  <div 
+    class="feature-row"
+    >
+    <!-- *ngFor="let item of data; let i = index"
+    [class.reverse]="i % 2 !== 0" -->
+    <!-- Text -->
+    <div class="text-box">
+      <p>{{ infoData.description }}</p>
+    </div>
+
+    <!-- Image -->
+    <div class="image-box">
+      <img [title]="infoData.title" [src]="infoData.image" [alt]="infoData.title || ''" />
+    </div>
+  </div>
+
+</section>

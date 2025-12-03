@@ -1,0 +1,36 @@
+.feature-section {
+  width: 100%;
+  padding: 3rem 2rem;
+
+  .section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+  }
+
+  .feature-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    .text-box {
+      flex: 1;
+    }
+
+    .image-box {
+      flex: 1;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+}
