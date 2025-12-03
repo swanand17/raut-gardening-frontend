@@ -1,1 +1,115 @@
-<p>contact-us works!</p>
+<div class="contact-page">
+
+  <!-- Page Title -->
+  <h1 class="h1 font-primary text-center mb-4">Contact Us</h1>
+  <p class="body text-center text-muted intro">
+    Have a project in mind? We're here to help you bring it to life.
+  </p>
+
+  <div class="contact-grid">
+
+    <!-- Contact Form -->
+    <div class="contact-form card">
+      <h2 class="h3 font-primary mb-3">Send Us a Message</h2>
+
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+
+        <!-- Name -->
+        <div class="form-group">
+          <label class="label">Full Name</label>
+          <input 
+            type="text"
+            name="name"
+            ngModel
+            required
+            class="input"
+            placeholder="Your Full Name">
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label class="label">Email</label>
+          <input 
+            type="email"
+            name="email"
+            ngModel
+            required
+            class="input"
+            placeholder="Your Email Address">
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+          <label class="label">Phone Number</label>
+          <input 
+            type="tel"
+            name="phone"
+            ngModel
+            required
+            class="input"
+            placeholder="Your Phone Number">
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+          <label class="label">Message</label>
+          <textarea 
+            name="message"
+            ngModel
+            required
+            rows="5"
+            class="textarea"
+            placeholder="Tell us about your project"></textarea>
+        </div>
+
+        <button class="btn-submit" [disabled]="!contactForm.valid">
+          Send Message
+        </button>
+
+      </form>
+    </div>
+
+    <!-- Right Column: Contact Info + Map -->
+    <div class="contact-info card">
+      <h2 class="h3 font-primary mb-3">Reach Us</h2>
+
+      <div class="info-item">
+        <span class="icon">📍</span>
+        <p class="body-sm">
+          Opp. Hemant Jadhav, Patil Wadi, Yeoor Hill Road, Pokhran Road No.1, Thane(W) - 400606
+          Maharashtra, India
+        </p>
+      </div>
+
+      <div class="info-item">
+        <span class="icon">📞</span>
+        <p class="body-sm">
+          +91 96379 95585, +91 99205 27259
+        </p>
+      </div>
+
+      <div class="info-item">
+        <span class="icon">✉️</span>
+        <p class="body-sm">
+          rautsgardening&#64;gmail.com
+        </p>
+      </div>
+
+      <!-- Google Maps Embed -->
+      <div class="map-container">
+        <iframe
+          width="100%"
+          height="250"
+          frameborder="0"
+          style="border:0; border-radius: 12px;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1161003598!2d72.74109926121435!3d19.08268809951064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8d8cf63e9cf%3A0x138c165e0c1a4d0!2sThane%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v0000000000">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+
+</div>
