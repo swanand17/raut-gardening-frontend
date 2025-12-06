@@ -1,7 +1,15 @@
 <section class="feature-section">
 
-  <!-- Title -->
-  <h2 class="section-title">{{ title }}</h2>
+  <div class="feature-section-header">
+    <button type="button" title="Back Arrow" (click)="goBack()" class="back-btn">
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none"
+        stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <!-- Title -->
+    <h2 class="section-title">{{ title }}</h2>
+  </div>
 
   <!-- Rows -->
   <div 
