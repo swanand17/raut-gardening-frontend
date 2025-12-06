@@ -4,16 +4,18 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 4rem;
 
     h1{
-        font-size: 5rem;
+        font-size: 4rem;
         text-align: center;
         padding: 1.5rem;
+        margin-bottom: 2rem;
         color: rgb(38, 187, 38);
     }
     p {
         visibility: hidden;
-        font-size: 3rem;
+        font-size: 2rem;
         color: black;
         max-width: 800px;
         text-align: center;
@@ -95,7 +97,6 @@
 }
 
 .services-cards{
-    padding: 4rem;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
@@ -150,7 +151,7 @@
         backdrop-filter: blur(2px);   
 
         h3 {
-            font-size: 2rem;
+            font-size: 1.75rem;
         }
     }
 }

@@ -1,0 +1,94 @@
+.projects{
+    margin: auto;
+    // background-image: url('../../assets/projects-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 4rem;
+
+    h1{
+        font-size: 4rem;
+        text-align: center;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        color: rgb(38, 187, 38);
+    }
+    p {
+        visibility: hidden;
+        font-size: 2rem;
+        color: black;
+        max-width: 800px;
+        text-align: center;
+        vertical-align: middle;
+        letter-spacing: 1px;
+    }
+}
+
+.projects-cards{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1); 
+    position: relative;
+    width: 30%;
+    height: 300px;              // adjust as needed
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.4s ease, background-size 1s ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: inherit;
+        background-size: cover;
+        transform-origin: center;
+        transition: transform .4s ease-in-out;
+    }
+
+    
+    &:focus,
+    &:hover {
+        &::after {
+            transform: scale(1.05);
+        }
+        transform: translateY(-3px);
+    }
+
+
+    // bottom text container
+    .card-content {
+        z-index: 1;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 3rem;
+        background: rgba(0, 0, 0, 0.5);   // transparent black
+        color: #fff;
+        -webkit-backdrop-filter: blur(2px);    // optional: gives a frosted look
+        backdrop-filter: blur(2px);   
+
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
+.leaf-icon{
+    position: absolute;
+    top: 200px;
+    right: 0;
+    height: 63rem;
+    transform: rotate(316deg);
+}

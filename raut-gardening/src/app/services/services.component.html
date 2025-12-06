@@ -27,10 +27,10 @@
             </div>
         </div>
     </div> -->
-    <div class="full-width services-cards container-max-width">
+    <div class="full-width services-cards container-max-width" *ngIf="!selectedService">
     
         <ng-container *ngFor="let service of servicesData">
-            <div class="card pointer" [ngStyle]="{ 'background-image': 'url(' + service.image + ')' }" (click)="selectedService = service">
+            <div class="card pointer" [ngStyle]="{ 'background-image': 'url(' + service.image + ')' }" (click)="selectService(service)">
                  <div class="card-content">
                     <h3>{{ service.title }}</h3>
                 </div>
@@ -39,7 +39,7 @@
         </ng-container>
     
     </div>
-    <div *ngIf="selectedService">
-        <app-info-details [title]="selectedService?.title" [infoData]="selectedService"></app-info-details>
+    <div *ngIf="selectedService && !loadedInHome" class="service-detail container-max-width">
+        <app-info-details [type]="'services'" [title]="selectedService?.title" [infoData]="selectedService" (backEvent)="reset($event)"></app-info-details>
     </div>
 </section>

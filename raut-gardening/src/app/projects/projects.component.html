@@ -1,1 +1,18 @@
-<p>projects works!</p>
+<section class="projects container-max-width" [ngStyle]="{ 'position': loadedInHome ? '' : 'relative' }">
+    <!-- <img src="assets/leaf-1.jpeg" alt="decotative Leaf 1" class="leaf-icon" /> -->
+    <h1>Projects</h1>
+
+    <div class="full-width projects-cards container-max-width">
+    
+        <ng-container *ngFor="let project of projects">
+            <div class="card pointer" [ngStyle]="{ 'background-image': 'url('+ assetRoute + project.image + ')' }" (click)="selectedProject = project">
+                 <div class="card-content">
+                    <h3>{{ project.title }}</h3>
+                </div>
+                <!-- <img [src]="project.image" [alt]="project.title || ''" /> -->
+            </div>
+        </ng-container>
+    
+    </div>
+
+</section>
