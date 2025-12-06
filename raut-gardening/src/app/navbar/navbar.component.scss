@@ -12,14 +12,14 @@
       // background-color: rgb(17, 179, 17);
       
       &-logo{
-        width: 20rem;
-        height: 10rem;
+        width: 15rem;
+        height: 5rem;
       }
     }
   }
 
 .nav-link{
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 2.5rem;
   border-radius: 0.8rem;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -33,4 +33,9 @@
     display: flex;
     gap: 2rem;
   }
+}
+
+.active{
+  background-color: #783f00;
+  color: white;
 }
