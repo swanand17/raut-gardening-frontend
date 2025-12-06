@@ -66,6 +66,12 @@ ul {
     cursor: pointer;
 }
 
+.active-link{
+  background-color: #783f00;
+  color: white;
+}
+
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

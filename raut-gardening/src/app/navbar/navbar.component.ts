@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { NavLogoComponent } from './nav-logo/nav-logo.component';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [NavLogoComponent, RouterLink],
+  imports: [NavLogoComponent, RouterLink, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
