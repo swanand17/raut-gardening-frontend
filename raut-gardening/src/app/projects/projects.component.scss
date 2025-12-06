@@ -86,9 +86,11 @@
 
 
 .leaf-icon{
+    z-index: -2;
     position: absolute;
-    top: 200px;
+    top: 20rem;
+    left: -35rem;
     right: 0;
-    height: 63rem;
-    transform: rotate(316deg);
+    height: 30rem;
+    transform: rotate(338deg);
 }
